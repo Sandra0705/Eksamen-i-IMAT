@@ -1,0 +1,32 @@
+\chapter{Lektion 1}
+
+Bevis nedenstående udsagn ved induktion
+\begin{align} \label{lektion1_opgave}
+    \sum_{k=1}^n = k^3 = 1+8+27+\cdots n^3 = \frac{1}{4}n^2(n+1)^2 \quad \text{for} n \in \N
+\end{align}
+
+\subsubsection{Besvarelse}
+Lad \eqref{lektion1_opgave} være udsagnet som bliver kaldt $U_n$. For at vise at $U_n$ er sandt, skal $U_1$ først bevises og derefter skal det bevises at for alle $m \in \N$ gælder det at $U_m \Rightarrow U_{m+1}$\cite[s. 7]{"ETP"}. 
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+\begin{align*}
+    U_1(induktionsstarten): 1^3 = \frac{1}{4} \cdot 1^2 (1+1)^2 \Leftrightarrow 1=1
+\end{align*}
+Dermed er det vist at $U_1$ er sand. Det antages nu at $U_m$ er sand for $m \in \N$. Altså at
+\begin{align*}
+    \sum_{k=1}^m k^3 = \frac{1}{4}m^2(m+1)^2
+\end{align*}
+er sand. Dette er induktionshypotesen. Det skal nu vises at $U_m \Rightarrow U_{m+1}$. 
+\begin{align*}
+    U_{m+1}(induktionsskridtet): \sum_{k=1}^{m+1} k^3= (m+1)^3 + \sum_{k=1}^m k^3
+\end{align*}
+Nu indsættes induktionshypotesen
+\begin{align}
+    (m+1)^3 + \sum_{k=1}^m k^3 &= (m+1)^3 + \frac{1}{4}m^2(m+1)^2 = \frac{1}{4}m^4 + \frac{3}{2}m^3 + \frac{13}{4}m^2 +3m + 1\nonumber \\ &= \frac{1}{4}(m+2)^2(m+1)^2 \label{lektion1_1}
+\end{align}
+For at se om dette er korrekt indsættes $m+1$ i \eqref{lektion1_opgave}.
+\begin{align}
+    \sum_{k=1}^{m+1} = \frac{1}{4}(m+1)^2((m+1)+1)^2 =\frac{1}{4}(m+1)^2((m+2)^2 \label{lektion1_2}
+\end{align}
+Da udtrykkene i \eqref{lektion1_1} og \eqref{lektion1_2} er lig hinanden. Er det nu bevist at \eqref{lektion1_opgave} er sand. 
+\end{bev}
