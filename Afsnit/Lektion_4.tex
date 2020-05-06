@@ -1,1 +1,45 @@
 \chapter{Lektion 4}
+Lad $u$ og $v$ være reelle tal således, at $0<u<v$, og lad talfølgerne $\{a_n\}^\infty_{n=1}$ og $\{b_n\}^\infty_{n=1}$ være defineret rekursivt ved
+\begin{align*}
+    a_1 = u&, \quad b_1=v\\
+    a_n = \frac{2a_{n-1}b_{n-1}}{a_{n-1}+b_{n-1}}&, \quad b_n = \frac{a_{n-1}+b_{n-1}}{2} 
+\end{align*}
+For $n>1$.
+
+a) Bevis at $a_n < b_n$ for $n \in \N$. 
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Ud fra vinket som er givet i opgaven ses der på $b_n-a_n$.
+\begin{align*}
+    b_n-a_n = \frac{a_{n-1}+b_{n-1}}{2} - \frac{2a_{n-1}b_{n-1}}{a_{n-1}+b_{n-1}}
+\end{align*}
+Dette skrives nu på fælles brøkstreg, reduceres og tilsidst faktoriseres tælleren i brøken
+\begin{align}
+     b_n-a_n &= \frac{(a_{n-1}+b_{n-1})^2-4a_{n-1}b_{n-1}}{2(a_{n-1}+b_{n-1})} \nonumber \\
+     &= \frac{(a_{n-1})^2+(b_{n-1})^2-2a_{n-1}b_{n-1}}{2(a_{n-1}+b_{n-1})} \nonumber \\
+     &= \frac{(a_{n-1}-b_{n-1})^2}{2(a_{n-1}+b_{n-1})}\label{Lektion4}
+\end{align}
+
+Da noget opløftet i 2 altid er positivt ses at tælleren i \eqref{Lektion4} er positivt. Nævneren er også positiv da det vides at $u$ og $v$ er positive og der ikke trækkes noget fra nogle steder. Da både tælleren og nævneren altid vil give noget positivt, er hele brøken altid positiv, og derfor må der gælde at $a_n < b_n$.
+\end{bev}
+
+b) Bevis, at $\{a_n\}\infty_{n=1}$ er voksende og $\{b_n\}\infty_{n=1}$ aftagende.
+Fra delopgave a) vides det at $a_{n-1} < b_{n-1}$. Ud fra dette vides det også at 
+\begin{align}\label{lektion4_2}
+    a_{n-1}+b_{n-1} < 2b_{n-1}
+\end{align}
+
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Først bevises det at $a_n$ er voksende. Det vides fra opgaven hvordan $a_n$ rekursivt er beskrevet. Dette samt \eqref{lektion4_2} bruges til at bevise at $a_n$ er voksende
+\begin{align*}
+    a_n = \frac{2a_{n-1}b_{n-1}}{a_{n-1}+b_{n-1}}>\frac{2a_{n-1}b_{n-1}}{2b_{n-1}} = a_{n-1}
+\end{align*}
+Altså gælder det at $a_n > a_{n-1}$ og derfor er $a_n$ voksende.
+
+Nu bevises det at $b_n$ er aftagende. Dette gøres ved brug af definitionen på $b_n$ og \eqref{lektion4_2}. 
+\begin{align*}
+    b_n = \frac{a_{n-1}+b_{n-1}}{2} < \frac{2b_{n-1}}{2} = b_{n-1}
+\end{align*}
+Altså gælder det at $b_n < b_{n-1}$ og derfor er $b_n$ aftagende.
+\end{bev}

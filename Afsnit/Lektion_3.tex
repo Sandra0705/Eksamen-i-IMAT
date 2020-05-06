@@ -1,1 +1,38 @@
 \chapter{Lektion 3}
+
+Lad $\{a_n\}^\infty_{n=1}$, $\{b_n\}^\infty_{n=1}$ og $\{x_n\}^\infty_{n=1}$ være reelle talfølger således, at $x_n$ er "klemt inde" mellem $a_n$ og $b_n$, dvs.
+%
+\begin{align*}
+    a_n \leq x_n \leq b_n \quad \text{for alle} \quad n\in \N
+\end{align*}
+
+Bevis, at hvis talfølgerne $\{a_n\}^\infty_{n=1}$ og $\{b_n\}^\infty_{n=1}$ er konvergente med den samme grænseværdi $c$, så er $\{x_n\}^\infty_{n=1}$ også konvergent med grænseværdien $c$.
+
+\subsubsection{Besvarelse}
+Det vides at
+\begin{align}
+a_n &\leq x_n \leq b_n \nonumber \\
+\lim_{n\rightarrow \infty} a_n &= \lim_{n\rightarrow \infty} b_n = c \label{lektion3_1}
+\end{align}
+
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Ud fra ovenstående fås
+\begin{align*}
+    a_n - c \leq x_n - c \leq b_n - c
+\end{align*}
+Først bestemmes grænserne for $x_n-c$. 
+\begin{align*}
+    x_n - c &\leq b_n - c\\
+    -(x_n - c) &\leq -(a_n - c)
+\end{align*}
+Ud fra dette haves at 
+\begin{align*}
+    |x_n - c| \leq max\{b_n-c, -(a_n - c)\} \leq max\{|b_n-c|, |a_n - c|\}
+\end{align*}
+$|b_n-c|$ kaldes $N_b$ og $|a_n - c|$ kaldes $N_a$. Disse går mod 0, hvilket ses ud fra \autoref{lektion3_1}. Derfor kan man altid finde en værdi med dem, som er under $\epsilon$. Givet $\epsilon>0$, så lad $N=max\{N_a,N_b\}$ afparere for $\{a_n\}^\infty_{n=1}$ og $\{b_n\}^\infty_{n=1}$. Så gælder det at
+\begin{align*}
+    n\geq N \Rightarrow |b_n-c|<\epsilon \text{og} |a_n-c|<\epsilon \Rightarrow |x_n - c| < \epsilon
+\end{align*}
+Derudfra gælder det altså at $x=c$, altså at $\{x_n\}^\infty_{n=1}$ også er konvergent med grænseværdien $c$.
+\end{bev}

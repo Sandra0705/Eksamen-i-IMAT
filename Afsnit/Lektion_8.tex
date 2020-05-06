@@ -1,1 +1,64 @@
 \chapter{Lektion 8}
+Lad $A\subseteq \R$ være en delmængde at $\R$, lad $f,g: A \rightarrow \R$ være reelle funktioner defineret på A, og lad $a\in A$.
+
+a) Vis, at hvis $f$ er kontinuert i $a$ og $g$ diskontinuert, så er $f+g$ diskontinuert i $a$.
+
+Til at vise dette vil definition 5.6\cite[s. 73]{"ETP"} om følgekontinuitet blive brugt. Der vil for enhver talfølge $\{x_n\}_{n=1}^\infty$ i $A$ gælde
+\begin{align*}
+    x_n \rightarrow a \quad \text{for} \quad n \rightarrow \infty \quad \Rightarrow \quad
+    f(x_n) \rightarrow f(a) \quad \text{for} \quad n \rightarrow \infty
+\end{align*}
+og at 
+\begin{align}
+    x_n \rightarrow a \quad \text{for} \quad n \rightarrow \infty \quad \Rightarrow \quad
+    g(x_n) \nrightarrow g(a) \quad \text{for} \quad n \rightarrow \infty \label{lektion8}
+\end{align}
+Da $f$ er kontinuert og $g$ er diskontinuert. 
+
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Det vil bevises ved et modstridsbevis. Altså antages det at $f + g$ er kontinuert. Der vil da gælde følgende
+\begin{align*}
+    f(x_n) + g(x_n) \rightarrow f(a) + g(a)
+\end{align*}
+Hvilket også kan skrives som 
+\begin{align*}
+    \lim_{n\to \infty} f(x_n) + \lim_{n \to \infty} g(x_n) = f(a) + g(a)
+\end{align*}
+Da grænseværdien for $f(x_n)$ kendes, indsættes denne i ovenstående og derefter trækkes $f(a)$ fra på begge sider.
+\begin{align*}
+    f(a)+\lim_{n \to \infty} g(x_n) &= f(a) + g(a)\\
+    &\Updownarrow\\
+    \lim_{n \to \infty} g(x_n) &= g(a)\\
+    &\Updownarrow\\
+    g(x_n) &\to g(a)
+\end{align*}
+Dette er en modstrid med \eqref{lektion8}. Derfor er $f+g$ diskontinuert i $a$. 
+\end{bev}
+
+b) Gælder det samme om $fg$?\\
+Dette bevis følger samme fremgangsmåde som foregående bevis og derfor vil udregningerne først blive kommenteret fra der hvor fremgangsmåden afviger fra foregående bevis. 
+
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Det antages derfor at $fg$ er kontinuert.
+\begin{align*}
+    f(x_n) \cdot g(x_n) &\to f(a) \cdot g(a)\\
+    &\Updownarrow\\
+    \lim_{n\to \infty} f(x_n) \cdot \lim_{n \to \infty} g(x_n) &= f(a) \cdot g(a)\\
+    &\Updownarrow\\
+    f(a)\cdot\lim_{n \to \infty} g(x_n) &= f(a) \cdot g(a)\\
+\end{align*}
+Hvis man her dividere med $f(a)$ på begge sider, vil det blive antaget at $f(a) \neq 0$, da det ikke er muligt at dividere med nul. Det betyder derfor at hvis $f(a) \neq 0$ er $fg$ diskontinuert, da man i dette tilfælde vil møde en modstrid med \eqref{lektion8}. Derudover kan der ikke konkluderes på $fg$. 
+\end{bev}
+
+c) Hvis både $f$ og $g$ er diskontinuerte er der eksempler, hvor $f+g$ og $fg$ er kontinuerte. Find eksempler på begge disse.\\
+$$f = \begin{cases} 
+      4 & x\leq 0 \\
+      0 & x>0 
+   \end{cases}\\$$
+$$g = \begin{cases} 
+      0 & x\leq 0 \\
+      4 & x>0 
+   \end{cases}\\$$
+$f$ og $g$ er her begge diskontinuerte, men både $f+g$ og $fg$ er kontinuerte. $f+g$ vil for alle $x$ give 4, og $fg$ vil for alle $x$ give 0.

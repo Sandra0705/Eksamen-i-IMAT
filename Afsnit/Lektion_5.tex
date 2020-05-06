@@ -1,1 +1,30 @@
 \chapter{Lektion 5}
+Bevis, at rækken
+
+\begin{align*}
+    \sum_{n=1}^\infty \frac{1}{(2n-1)(2n+1)}
+\end{align*}
+er konvergent og bestem dens sum ved at bruge samme ide som i eksempel 4.15
+
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Der tages udgangspunkt i fremgangsmåden i eksempel 4.15 \cite[s. 266]{"ETP"}.
+Først omskrives $\sum_{n=1}^\infty \frac{1}{(2n-1)(2n+1)}$. Først vil der bruges at $\frac{(2n+1)-(2n-1)}{2} = 1$, og derefter vil udtrykket reduceres sådan at metoden i eksempel 4.15 kan bruges.
+\begin{align*}
+    \sum_{n=1}^\infty \frac{1}{(2n-1)(2n+1)} &=  \sum_{n=1}^\infty \frac{(2n+1)-(2n-1)}{2((2n-1)(2n+1))} \\
+    &= \sum_{n=1}^\infty \frac{(2n+1)}{2((2n-1)(2n+1))} - \frac{(2n-1)}{2((2n-1)(2n+1))} \\
+    &= \sum_{n=1}^\infty \frac{1}{2(2n-1)} - \frac{1}{2(2n+1)}\\
+    &= \sum_{n=1}^\infty \frac{1}{4n-2)} - \frac{1}{4n+2)}
+\end{align*}
+Da kan det $n$'te afsnit skrives 
+\begin{align*}
+    s_n &= \sum_{j=1}^n \frac{1}{(2j-1)(2j+1)} \\
+    &= \sum_{j=1}^n \frac{1}{4j-2)} - \frac{1}{4j+2)} \\
+    & = (\frac{1}{2}-\frac{1}{6})+(\frac{1}{6}-\frac{1}{10}) + (\frac{1}{10}-\frac{1}{18}) +\cdots+\frac{1}{4n-2}+\frac{1}{4n+2}\\
+    &=\frac{1}{2}-\frac{1}{4n+2}
+\end{align*}
+Af sætning 4.4 \cite[s. 48]{"ETP"} er $\frac{1}{n}$ konvergent mod 0. Derfor ser vi at når $n \rightarrow \infty$ vil
+\begin{align*}
+    \sum_{n=1}^\infty \frac{1}{(2n-1)(2n+1)} = \frac{1}{2}
+\end{align*}
+\end{bev}

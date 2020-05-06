@@ -1,5 +1,5 @@
 \chapter{Lektion 2}
-Bevis følgende udsagn udelukkende ved brug af definitionen af konvergens for en talfølge: Hvis følgen $\{a_n\}^\infty_{n=1}$ er konvergent med $\lim_{n\rightarrow1}$ $a_n = a$, så er følgen defineret ved $bn = an + 7$ for $n \in N$ også konvergent.
+Bevis følgende udsagn udelukkende ved brug af definitionen af konvergens for en talfølge: Hvis følgen $\{a_n\}^\infty_{n=1}$ er konvergent med $\lim_{n\rightarrow \infty}$ $a_n = a$, så er følgen defineret ved $bn = an + 7$ for $n \in N$ også konvergent.
 
 \begin{defn}\textbf{Konvergens} %Ny definition
 \newline
@@ -17,11 +17,15 @@ Såfremt $\forall \varepsilon >0 \ \exists \ N \in \N \  \forall n \in \N : n \g
 \subsubsection{Besvarelse}
 Oplysninger:
 \begin{enumerate}
-    \item $\lim_{n\rightarrow1}$ $a_n = a$
-    \item $bn = an + 7$
+    \item $\lim_{n\rightarrow \infty}$ $a_n = a$
+    \item $b_n = a_n + 7$
 \end{enumerate}
-Ud fra disse har vi påstanden at $\lim_{n\rightarrow1}$ $b_n = a+7$. Dette vil nu bevises ved at bruge definitionen på konvergens
+Ud fra disse har vi påstanden at $\lim_{n\rightarrow \infty}$ $b_n = a+7$. Dette vil nu bevises ved at bruge definitionen på konvergens.
 \begin{bev} \textbf{} %Nyt bevis
 \newline
-
+Givet et $\epsilon>0$, så lad $N$ afparere for $\{a_n\}^\infty_{n=1}$. Så gælder det at
+\begin{align*}
+    n \geq N \Rightarrow |b_n - (a+7)| = |(a_n + 7) - (a+7)| = |a_n-a| < \epsilon
+\end{align*}
+Derfor gælder det at $\lim_{n\rightarrow \infty}$ $b_n = a+7$, og derfor er $bn = an + 7$ konvergent hvis $\{a_n\}^\infty_{n=1}$ er konvergent med $\lim_{n\rightarrow \infty}$ $a_n = a$.
 \end{bev}

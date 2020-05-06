@@ -1,1 +1,25 @@
 \chapter{Lektion 9}
+Opgave 158a)
+Vis, at de nedenfor angivne funktioner antager værdien 0 i de angivne intervaller:
+
+\begin{align*}
+    f(x)=e^x-x-2 \quad \text{i} [0,2]
+\end{align*}
+
+\begin{bev} \textbf{} %Nyt bevis
+\newline
+Lemma 5.15 \cite[s. 77]{"ETP"} vil blive brugt til at bevise dette. Dette lemma siger at hvis $f$ er kontinuert og at $f(a) < 0 < f(b)$, så har $f$ et nulpunkt. 
+
+Først vil det vises at $f$ er kontinuert. $f$ er en funktion som består af summen af funktionerne $e^x$, $-x$ og $-2$. Af sætning 5.9 \cite[s. 74]{"ETP"} følger det at, hvis disse tre funktioner er kontinuerte hver for sig, så er $f$ også kontinuert. Af sætning 5.4\cite[s. 71]{"ETP"} og sætning 5.5\cite[s. 72]{"ETP"} er alle tre funktioner kontinuerte med definitionsmængden $\R$. Derfor er $f$ kontinuert. 
+
+Værdierne for $f(0)$ og $f(2)$ bestemmes nu
+\begin{align*}
+    f(0) = e^0-0-2 = -1 < 0 
+    f(2) = e^2 - 2 - 2 = e^2 - 4 < 0 
+\end{align*}
+Derfor gælder det at $f(0) < 0 < f(2)$. 
+
+Da $f$ er kontinuert og det gælder at $f(0) < 0 < f(2)$ gælder det fra lemma 5.15 \cite[s. 77]{"ETP"} at $f$ har et nulpunkt i det givne interval. 
+\end{bev}
+
+
